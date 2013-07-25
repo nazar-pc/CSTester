@@ -21,7 +21,7 @@ class CSTester {
 		$this->tests_directory	= $tests_directory;
 		$this->cli				= PHP_SAPI == 'cli';
 		@ini_set('error_log', "$tests_directory/error.log");
-		$this->title			= json_decode(file_get_contents("$this->tests_directory/test.json"), true)['title'];
+		$this->title			= json_decode(file_get_contents("$this->tests_directory/tests.json"), true)['title'];
 	}
 	/**
 	 * Set port number (for CLI mode only)
