@@ -45,14 +45,14 @@ so, you can extract only this one file.
 
 # How to use?
 
-Put into root directory of the project `test.php` with such content (assumed composer directories structure):
+Put into root directory of the project `test.php` with such content (assumed composer is used, otherwise include `src/nazarpc/CSTester.php` file in any possible way):
 
 ```php
 <?php
 /**
  * Include CSTester class
  */
-include __DIR__.'/vendor/nazarpc/CSTester.php';
+require __DIR__.'/vendor/autoload.php';
 use nazarpc\CSTester;
 /**
  * Create class instance and run testing
