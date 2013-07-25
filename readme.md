@@ -40,7 +40,7 @@ Run `git clone https://github.com/nazar-pc/CSTester.git` inside project director
 
 ## Manual
 
-Download zap/tarball from GitHub repository and extract to project directory (actually, only `src/nazarpc/CSTester.php` file is needed,
+Download zip/tarball from GitHub repository and extract to project directory (actually, only `src/nazarpc/CSTester.php` file is needed,
 so, you can extract only this one file.
 
 # How to use?
