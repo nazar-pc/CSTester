@@ -17,9 +17,8 @@ class CSTester {
 				$title;
 	/**
 	 * @param string $tests_directory	Absolute path to tests directory
-	 * @param string $test_file			Relative path to file, that call tester from document root (useful if file is not in document root)
 	 */
-	function __construct ($tests_directory, $test_file = null) {
+	function __construct ($tests_directory) {
 		$this->tests_directory	= $tests_directory;
 		$this->cli				= PHP_SAPI == 'cli';
 		@ini_set('error_log', "$tests_directory/error.log");
@@ -27,7 +26,12 @@ class CSTester {
 		/**
 		 * Detect file, where tester was called
 		 */
-		$this->test_file		= $test_file ?: array_pop(explode('/', array_pop(debug_backtrace())['file']));
+		$this->test_file		= array_pop(debug_backtrace())['file'];
+		if ($_SERVER['DOCUMENT_ROOT']) {
+			$this->test_file	= str_replace(rtrim($_SERVER['DOCUMENT_ROOT'], '/').'/', '', $this->test_file);
+		} else {
+			$this->test_file	= array_pop(explode('/', $this->test_file));
+		}
 	}
 	/**
 	 * Set port number (for CLI mode only)
@@ -245,8 +249,8 @@ class CSTester {
 		 */
 		} else {
 			echo	"\e[1m$title\e[21m\n".
-					str_repeat('-', strlen($title))."\n".
-					"Test in progress 0%...\n";
+					str_repeat('-', strlen($title))."\n\n";
+			echo	"\e[1ATest in progress 0%...\n";
 		}
 	}
 	/**
