@@ -135,6 +135,7 @@ class CSTester {
 		}
 		closedir($suites_dir);
 		unset($suites_dir, $suite);
+		natcasesort($suites_list);
 		$suites_count	= count($suites_list);
 		/**
 		 * Display tester header
