@@ -41,7 +41,7 @@ Run `git clone https://github.com/nazar-pc/CSTester.git` inside project director
 ## Manual
 
 Download zip/tarball from GitHub repository and extract to project directory (actually, only `src/nazarpc/CSTester.php` file is needed,
-so, you can extract only this one file.
+so, you can extract only this one file (for CLI mode, for HTML copy `includes` directory).
 
 # How to use?
 
