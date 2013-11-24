@@ -24,7 +24,7 @@ Copyright (c) 2013, Nazar Mokrynskyi
 
 ## Composer
 
-Simply add dependency on `nazarpc/cstester` to your project's `composer.json`:
+Simply add dependency on `nazar-pc/cstester` to your project's `composer.json`:
 
 ```json
 {
