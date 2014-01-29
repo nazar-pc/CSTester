@@ -1,6 +1,5 @@
 {
 	"name"        : "nazar-pc/cstester",
-	"version"     : "0.1.7",
 	"description" : "CleverStyle Tester is simple tool to test your PHP applications",
 	"keywords"    : ["test", "testing"],
 	"homepage"    : "https://github.com/nazar-pc/CSTester",
@@ -19,6 +18,11 @@
 	"autoload"    : {
 		"psr-0" : {
 			"nazarpc" : "src/"
+		}
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "0.1-dev"
 		}
 	}
 }
