@@ -1,3 +1,5 @@
+# IS NOT MAINTAINED ANYMORE, use PHPT tests instead
+
 # What is this?
 
 CleverStyle Tester is simple tool to test your PHP applications
